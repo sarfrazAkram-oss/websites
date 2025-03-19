@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICACS'18 Conference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+        }
+
+        .header {
+            background: url('images.jpeg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        .navbar li {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-right: 1px solid gray;
+            position: relative;
+            width: auto;
+        }
+
+        .navbar ul {
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            width: 200px;
+            display: none;
+            background-color: #333;
+        }
+
+        .navbar li:hover > ul {
+            display: block;
+        }
+
+        .navbar ul ul {
+            left: 100%;
+            top: 0px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .navbar li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul {
+                width: 100%;
+                position: static;
+            }
+
+            .header {
+                height: 200px;
+                font-size: 18px;
+            }
+
+            .content-section {
+                flex-direction: column;
+            }
+
+            .text-section {
+                flex: 100%;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+            }
+
+            .image-section {
+                flex: 100%;
+                margin-top: 20px;
+            }
+
+            .image-section img {
+                width: 100%;
+                height: auto;
+            }
+
+            .important-dates table {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .important-dates th, .important-dates td {
+                padding: 8px;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+
+            .sponsors {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sponsors img {
+                width: 100px; 
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .header {
+                height: 150px;
+                font-size: 16px;
+            }
+
+            .text-section {
+                padding: 15px;
+            }
+
+            .important-dates table {
+                font-size: 12px;
+            }
+
+            .sponsors img {
+                width: 80px;
+            }
+
+            .content-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .content-section {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        .text-section {
+            flex: 70%;
+            position: relative;
+            color: white;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .image-section {
+            flex: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-section1 {
+            background-color: white;
+            float: right;
+            padding: 20px;
+            position: relative;
+            color: #cc0000;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.jpg') no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .important-dates table {
+            width: 40%;
+            border-collapse: collapse;
+        }
+
+        .important-dates th, .important-dates td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .important-dates th {
+            background: #cc0000;
+            color: white;
+        }
+
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sponsors {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sponsors img {
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li>HOME</li>
+        <li>
+            ABOUT
+            <ul>
+                <li>history</li>
+                <li>
+                    searching
+                    <ul>
+                        <li>searching 1</li>
+                        <li>
+                            searching 2
+                            <ul>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </li>
+                        <li>searching 3</li>
+                        <li>searching 4</li>
+                    </ul>
+                </li>
+                <li>history 2</li>
+                <li>history 3</li>
+                <li>history 4</li>
+            </ul>
+        </li>
+        <li>TRUCKS</li>
+        <li>DATES</li>
+        <li>SPONSORS</li>
+    </ul>
+
+    <div class="header">
+        Upcoming international conference 2025 (ICAST)
+    </div>
+
+    <div class="container">
+        <div class="content-section">
+            <div class="background-image"></div>
+            <div class="text-section">
+                <h1>PAK conference 2025</h1>
+                <p>Find the list of upcoming Pakistan conferences 2025 with invitation letters, peer-reviewed paper submissions, and indexed journals at Conference Alert.com. Whether you are searching for fully funded conferences in the Pakistan, upcoming conferences in the India, or opportunities for academic growth, we've got you covered. Stay informed about academic, professional, and research-focused conference happening across the India.1. For conference organizers: The use of the conference manuscript templates provided by IEEE eXpress Conference Publishing will greatly reduce the chance for errors in the metadata visible in IEEE Xplore®, and IEEE's downstream Indexing partners. Errors may result in delays in posting or in making any approved corrections, or in some cases, may simply persist. Using the templates is one of the ways to reduce errors.
+                    If you wish, you may link to this webpage in its entirety. It is not recommended that you link to individual files, however, because they may be updated or replaced without notice.
+                    2. Grateful acknowledgement is made to the IEEE Computational Intelligence Society, which provided the current LaTeX template.
+                    3. Other templates that more closely align with the IEEE Transactions article format are available</p>
+                <h2>Conference Topics</h2>
+                <ul>
+                    <li> artificial Intelligence</li>
+                    <li>Data science and knowledge system</li>
+                    <li>Multimedia and Graphics</li>
+                    <li>Human Computer Interaction (HCI)</li>
+                    <li>Software Engineering</li>
+                </ul>
+                <p>Selected papers will be published in the International Journal of Information Technology and Web Engineering (IJITWE).</p>
+            </div>
+            <div class="image-section">
+                <div class="box">
+                    <h3>Extended Paper Submission Date</h3>
+                    <p>15th September 2017</p>
+                </div>
+                <div class="box">
+                    <h3>Venue</h3>
+                    <p>Lahore, Pakistan</p>
+                    <ul>
+                        <li><a href="#">Accepted Articles</a></li>
+                        <li><a href="#">Conference Program</a></li>
+                    </ul>
+                </div>
+                <img src="pp.jpg" alt="Conference Venue">
+                <img src="hh.jpeg" alt="City View">
+            </div>
+        </div>
+
+        <h2>Important Dates</h2>
+        <div class="important-dates">
+            <table>
+                <tr>
+                    <th>Paper submission Deadline (extended)</th>
+                    <th>15th September 2017</th>
+                </tr>
+                <tr>
+                    <td>Acceptance Notification</td>
+                    <td>30th November 2017</td>
+                </tr>
+                <tr>
+                    <td>Camera Ready Submission</td>
+                    <td>15th December 2017</td>
+                </tr>
+                <tr>
+                    <td>Early Bird Registration</td>
+                    <td>15th December 2017</td>
+                </tr>
+                <tr>
+                    <td>Late Registration</td>
+                    <td>1st January 2018</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Sponsors</h3>
+        <div class="sponsors">
+            <img src="o.png" alt="Sponsor 1">
+            <img src="u.jpeg" alt="Sponsor 2">
+            <img src="tw.png" alt="Sponsor 3">
+            <img src="aa.png" alt="Sponsor 4">
+            <img src="bb.png" alt="Sponsor 5">
+            <img src="cc.png" alt="Sponsor 6">
+            <img src="dd.jpeg" alt="Sponsor 4">
+        </div>
+        <p>Upcoming international conference 2025 (ICAST)</p>
+    </div>
+</body>
+</html>
